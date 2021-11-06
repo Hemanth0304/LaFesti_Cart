@@ -1,0 +1,94 @@
+<!-- <p>payment works!</p> -->
+<!-- <router-outlet></router-outlet> -->
+<div class="summary_01">
+    <h1>Payment</h1>
+  </div>
+  
+  
+  <div class="row">
+    <div class="col-75">
+      <div class="container">
+        
+  
+          <div class="row">
+            <div class="col-50">
+              <h2>Payment</h2>
+              <br>
+  
+              <label for="fname">Accepted Cards</label>
+              <div class="icon-container">
+                <i class="fa fa-cc-visa" style="color:rgb(255, 58, 58);"></i>&nbsp;
+                <i class="fa fa-cc-amex" style="color:rgb(255, 58, 58);"></i>&nbsp;
+                <i class="fa fa-cc-mastercard" style="color:rgb(255, 58, 58);"></i>&nbsp;
+                <i class="fa fa-cc-discover" style="color:rgb(255, 58, 58);"></i>
+              </div>
+
+
+              <form  [formGroup] = "pay"  >
+              <label for="cname">Name on Card</label>
+
+              <div *ngIf="cardname.errors" >
+                <h6 *ngIf="cardname.touched && cardname.errors.required" style="color: rgb(255, 83, 118);">
+                            Enter Name On Card 
+                </h6>
+                </div>
+              <input type="text" id="cname" formControlName= "cardname" placeholder="Hemanth Ram">
+
+
+              
+           
+                
+
+                <label for="ccnum">Credit card number</label>
+
+                <div *ngIf="cardnumber.errors" >
+                  <h6  style="color: rgb(0, 0, 0);"  *ngIf="cardnumber.touched && cardnumber.errors.required" style="color: crimson;">
+                              Enter Your Card Number 
+                  </h6>
+    
+                  </div>
+                 
+                
+                <input type="text" id="ccnum" formControlName="cardnumber" placeholder="1111-2222-3333-4444">
+                <label for="expmonth">Exp Month</label>
+    
+                <div *ngIf="expmonth.errors" >
+                  <h6 *ngIf="expmonth.touched && expmonth.errors.required" style="color: rgb(255, 83, 118);">
+                              Enter Exp Month
+                  </h6>
+    
+                  </div>
+                <input type="text" id="expmonth" formControlName="expmonth" placeholder="September">
+               
+                    <label for="expyear">Exp Year</label>
+                    <div *ngIf="expyear.errors" >
+                      <h6 *ngIf="expyear.touched && expyear.errors.required" style="color: rgb(255, 83, 118);">
+                                  Enter Exp Year 
+                      </h6>
+        
+                      </div>
+                    <input type="text" id="expyear" formControlName="expyear" placeholder="2018">
+                  
+                 
+                    <label for="cvv">CVV</label>
+                    <div *ngIf="cvv.errors" >
+                        <h6 formControlName="c" *ngIf="cvv.touched && cvv.errors.required" style="color: rgb(255, 83, 118);">
+                                    Enter CVV
+                        </h6>
+          
+                        </div>
+                    
+             
+                    <input type="password" id="cvv" formControlName="cvv" placeholder="352">
+              
+            
+            <input type="submit"  (click)="adddet()" value="Continue to checkout"  class="btn">
+                   
+<!--           
+            -->
+      </form>
+   </div>
+   </div>
+   </div>
+   </div>
+    

@@ -1,0 +1,309 @@
+<!-- <p>c2 works!</p> -->
+
+
+<div class="summary_01">
+    <H1>Order Summary</H1>
+ </div>
+ <div>
+    <div class="Food-cart"> 
+    <!-- Title -->
+    <div class="title">
+      YOUR FOOD BAG 
+    </div>
+    <!-- Product #1 -->
+    <div class= "item" *ngFor="let item  of products; let i= index">
+
+      <div class= "buttons">
+        <span class= "delete-btn"></span>
+        <span class= "like-btn"></span>  
+      </div>
+      
+       <div class="image">
+        <img src="https://st.depositphotos.com/3147737/4962/i/600/depositphotos_49622201-stock-photo-hyderabadi-biryani-a-popular-chicken.jpg"/>
+    </div>
+      <div class= "description" >  
+        <span>{{item.type}}</span>
+        <span> {{item.description}}</span>
+        
+      </div>
+   
+      <div class="quantity">
+        <button class="plus-btn" (click)="removeItem(item)" style="color: rgb(255, 255, 255);"> <i class="fas fa-trash-alt" style="color: rgb(255, 4, 58);"></i></button> &nbsp;
+       
+      
+      
+    
+      <!-- {{ l }} -->
+      &nbsp;
+        <!-- <button class="minus-btn" (click)="dislike()">-</button> -->
+      </div>
+   
+      <div class="total-price">{{ item.price | currency: 'INR' }}</div>
+      <hr>
+    </div>
+   
+
+
+
+
+    <!-- Product #2 -->
+    <!-- <div class="item">
+      <div class="buttons">
+        <span class="delete-btn"></span>
+        <span class="like-btn"></span>
+      </div>
+   
+      <div class="image">
+        <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2020/12/fried-rice.jpg"/>      </div>
+
+      <div class="description">
+        <span>Vegetable rice</span>
+        <span>Special</span>
+        <span>{{ l3 }} </span>
+      </div>
+   
+      <div class="quantity">
+        <button class="plus-btn" (click)="plus()">+</button> &nbsp;
+      
+      
+    
+      {{ l3 }}
+      &nbsp;
+        <button class="minus-btn" (click)="minus()">-</button>
+      </div> -->
+   
+      <!-- <div class="total-price">{{ res2 | currency: 'INR' }}</div>
+    </div> -->
+
+
+
+     <!-- Product #3 -->
+     <!-- <div class="item">
+      <div class="buttons">
+        <span class="delete-btn"></span>
+        <span class="like-btn"></span>
+      </div>
+   
+      <div class="image">
+        <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2020/12/fried-rice.jpg"/>      </div>
+
+      <div class="description">
+        <span>Chicken Fried Rice</span>
+        <span>Combo</span>
+        <span>{{ l3 }} </span>
+      </div>
+   
+      <div class="quantity">
+        <button class="plus-btn" (click)="like3()">+</button> &nbsp;
+      
+      
+    
+      {{ l3 }}
+      &nbsp;
+        <button class="minus-btn" (click)="dislike3()">-</button>
+      </div>
+   
+      <div class="total-price">Rs.{{ res3 }}</div>
+    </div>
+   -->
+    
+<div>
+  <div class="h">
+        
+<a  href="#1">Confirm order</a>
+
+</div>
+
+</div>
+</div>
+
+
+<br>
+<br>
+
+<div class="Total_01">
+  <H1> Total - {{ this.grandtotal | currency: 'INR'}}</H1>
+  <!-- <H1 style="color: crimson;">{{ tt }}</H1> -->
+</div>
+  
+
+
+
+
+
+<!-- -------------------------------------------------------------------- -->
+
+
+  
+
+<!-- 
+--------------OFFERS------------------------ -->
+<div class="summary_02">
+
+<H1>Offers</H1>
+
+
+
+
+   
+</div>
+
+<div>     
+
+
+</div>
+
+<div  id="1" class="row">
+<div class="column">
+<!-- 
+  <button type="button" class="btn btn-primary" [disabled]="clicked" (click)="actionMethod(); clicked = true;">Give Kitchen access</button>
+</div> -->
+<button type="button" class ="bttn" [disabled]="clicked"  (click)="dicsount1(); clicked = true;"><img src="https://drive.google.com/uc?export=view&id=10VZAiz0W1UTYw-jKGieVynWIfUiyS9q3" alt="Loading"
+  style="width:60%"    >
+</button>
+          
+</div>
+<div class="column">
+          <button type="button" class = "bttn" [disabled]="clicked"  (click)="dicsount2(); clicked = true;"><img src="https://drive.google.com/uc?export=view&id=1JQP103u1gsjxqQmr18XO0n6Q-S2zK_Ks" alt="Loading"
+            style="width:60%"  >
+          </button>
+</div>
+
+<div class="column">
+  <button type="button" class = "bttn" [disabled]="clicked"  (click)="dicsount3(); clicked = true;"><img src="https://www.downloadclipart.net/large/discount-png-clipart.png" alt="Loading"
+    style="width:60%"  >
+  </button>
+</div>
+
+
+<div class="column">
+  <button type="button" class = "bttn" [disabled]="clicked"  (click)="dicsount4(); clicked = true;"><img src="https://drive.google.com/uc?export=view&id=1I4M99brJUsAVlN5xH7EknHOFibiFECaF" alt="Loading"
+    style="width:60%"  >
+  </button>
+</div>
+
+</div>
+<div class="container">
+<span onclick="this.parentElement.style.display='none'" class="closebtn"></span>
+<img id="expandedImg"  style="width:60%"  >
+<div id="imgtext"></div>
+
+<!-- ------------------------------------------- -->
+
+<!-- <div class="col-25">
+  <div class="container2">
+    <br>
+    <h2 id = "c">Cart <span class="price" style="color:rgb(255, 58, 58)"><i class="fa fa-shopping-cart"></i> <b>3</b></span>
+    </h2>
+    <br>
+    <div class= "item" *ngFor="let item  of products; let i= index">
+    
+    <h4>{{item.type}} <span class="price" style="color:rgb(255, 58, 58)"><b>Rs.{{ item.price }}</b></span></h4>
+    
+    <h4>Gobi Manchurian <span class="price" style="color:rgb(255, 58, 58)"><b>Rs.230</b></span></h4>
+    <br>
+    <h4>Vegetable Fried Rics <span class="price" style="color:rgb(255, 58, 58)"><b>Rs.190</b></span></h4>
+    <br>
+    <hr>
+    <br>
+  </div>
+  <div class= "item" *ngFor="let it  of products; let i= index">
+    <h3>Total <span class="price" style="color:rgb(255, 58, 58)"><h3>Rs.{{ it.FT }}</h3></span></h3>
+    <h3>Total <span class="price" style="color:rgb(255, 58, 58)"><h3>Rs.{{ this.grandtotal }}</h3></span></h3>
+  </div>
+  </div>
+</div> -->
+
+<!-- PROMO CODE  -->
+
+
+<div class ="promo">
+<form  [formGroup] = "promos" >
+ 
+
+  <div *ngIf="name.errors" >
+   
+    <h6   *ngIf="name.touched && name.errors.required" style="color: crimson;">
+      ENTER A VALID PROMO CODE 
+  </h6>
+    
+    </div>
+
+
+  <input type="text" id="promon" formControlName= "name" placeholder = "   ENTER  PROMO CODE ">
+ 
+  
+  <input type="submit" (click)="discountval()" value="REDEEM" class="btn">
+
+  
+  </form>
+</div>
+
+</div>
+<h1 id="1" style="color: rgb(255, 255, 255);"> . </h1>
+
+
+
+
+<!-- payment screen -->
+
+<section class="pay">
+
+<div class="summary_02">
+  <H1>Payment</H1>
+  
+
+  <div  id="1" class="row">
+    
+    <div class="column">
+<br>
+      
+         <img src="https://drive.google.com/uc?export=view&id=15Pcr3efy2UcmMIb-k-t0iEt9zT0vpVDM"Loading
+              style="width:40%" onclick="myFunction(this);">
+              <br>
+              
+    </div>
+    <div class="column">
+<br>
+         <img src="https://skyfitnepal.com/_next/static/images/cod-ff667961b35dde6d9ac1389514c3ede2.png" alt="Loading"
+              style="width:40%" onclick="myFunction(this);">
+              
+    </div>
+    <div class="column">
+<br>
+         <img src="https://icons-for-free.com/iconfiles/png/512/credit+card+debit+card+master+card+icon-1320184902602310693.png" alt="Loading"
+              style="width:40%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <br>
+
+      <img src="https://1000logos.net/wp-content/uploads/2020/04/Google-Pay-Logo.png" alt="Loading"
+           style="width:49%" onclick="myFunction(this);">
+ </div>
+
+   
+  </div>
+ 
+  
+
+
+</div>
+
+
+
+
+
+
+<div class="PAY_01">
+<a   routerLink="/payment"  >Pay Now</a><br><br>
+</div>
+
+</section>
+
+
+
+
+
+
+ 
+

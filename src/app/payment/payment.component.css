@@ -1,0 +1,269 @@
+.body {
+    font-family: Arial;
+    font-size: 17px;
+    padding: 8px;
+  }
+  
+ 
+  
+  
+  .row {
+    display: -ms-flexbox; 
+    display: flex;
+    -ms-flex-wrap: wrap; 
+    flex-wrap: wrap;
+    margin: 0 -16px;
+  }
+  
+  .col-25 {
+    -ms-flex: 25%; 
+    flex: 25%;
+  }
+  
+  .col-50 {
+    -ms-flex: 50%; 
+    flex: 50%;
+  }
+  
+  .col-75 {
+    -ms-flex: 75%; 
+    flex: 75%;
+  }
+  
+  .col-25,
+  .col-50,
+  .col-75 {
+    padding: 0 16px;
+  }
+
+
+
+.container {
+    
+color: beige;
+margin-top: 5%;
+  background-color: #ffffff;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+  width: 100%;
+}
+
+
+.container:hover{
+    background-color: #ffffff;
+    box-sizing: border-box;
+    
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 15px 20px 22px rgba(0,0,0,0.5);
+}
+
+input[type=text] {
+    
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+input.ng-touched.ng-invalid {
+  border: 3px solid red;
+}
+input.ng-touched.ng-valid {
+  border: 3px solid rgb(82, 255, 82);
+}
+
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 10px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #ffffff;
+  color: rgb(255, 25, 25);
+  padding: 12px;
+  margin: 10px 0;
+  border: rgb(189, 0, 0) solid;
+  width: 100%;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+#cname:hover{
+  
+ 
+  border-color: bisque;
+  box-sizing: border-box;
+    
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 15px 10px 12px rgba(48, 48, 48, 0.5);
+}
+#ccnum:hover{
+  
+  
+  border-color: bisque;
+  box-sizing: border-box;
+    
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 15px 10px 12px rgba(48, 48, 48, 0.5);
+}
+#expmonth:hover{
+  
+  
+  border-color: bisque;
+  box-sizing: border-box;
+    
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 15px 10px 12px rgba(48, 48, 48, 0.5);
+}
+
+
+.btn:hover {
+  background-color: #ff2c2c;
+  color: #ffffff;
+  border-color: bisque;
+  box-sizing: border-box;
+    
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 6px 20px 22px rgba(0, 0, 0, 0.5);
+}
+
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+.summary_01{
+  
+  box-sizing: border-box;
+  text-align: center;
+  align-items: center;
+  border-radius: 30px;
+  box-shadow: 0 10px 12px rgba(0,0,0,0.5);
+
+  
+  background-color: rgb(255, 36, 36);
+  color: rgb(255, 255, 255);
+  font-size:20px;
+  font-family: 'Merriweather Sans', sans-serif;
+  position: relative;
+
+  padding-left: 30px;
+  margin-top:120px;
+  
+  
+}
+footer{
+  color: black;
+  background-color: seashell;
+  padding: 20px 20px;
+  margin-top: 15%;
+}
+.logo{
+  width:120px;
+}
+.container2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container2 ul{
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+}
+
+.container2 li{
+  padding: 0 15px;
+  margin-bottom: 16px;
+  display: inline-block;
+  
+  position: relative;
+}
+
+.container2 a{
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #ff5252;
+}
+
+.container2 ul li::after{
+  content: '';
+  width: 0%;
+  height:2px;
+  background: #ff5252;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.container2 ul li:hover::after{
+  width:100%;
+  
+}
+
+
+.flex-row{
+  margin-bottom: 1px;
+}
+
+.flex-row .fa{
+  display: block;
+  color: black;
+  margin: 5px;
+  /* text-decoration: none; */
+  font-size: 33px;
+  cursor: pointer;
+}
+.flex-row .fa:hover{
+  color: #ff5252;
+  
+}
+p{
+  text-align: center;
+
+
+}
+ /* ---------------------------FOOOOTER MEDIA QUERY------------------------- */
+@media (max-width: 500px){
+  .container2 ul{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+  }
+}
